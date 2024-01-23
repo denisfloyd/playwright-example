@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply font-sans;
+    @apply text-gray-900;
+    @apply bg-gray-50;
+  }
+
+  @keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 theme('colors.purple.100');
+    }
+
+    70% {
+      -webkit-box-shadow: 0 0 0 5px theme('colors.purple.100');
+    }
+
+    100% {
+      -webkit-box-shadow: 0 0 0 0 theme('colors.purple.100');
+    }
+  }
+
+  .ripple {
+    animation: pulse 2s infinite;
+  }
+}
