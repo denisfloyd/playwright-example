@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import {defineConfig} from 'vite';
+import {configDefaults} from 'vitest/config';
 import react from '@vitejs/plugin-react-swc';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import path from 'path';
@@ -11,12 +12,19 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
     setupFiles: '.vitest/setup',
-    include: ['**/*.(spec|test).[jt]s?(x)'],
+    include: ['**/__tests__/*.(spec|test).[jt]s?(x)'],
     coverage: {
       provider: 'v8',
       enabled: false,
       reporter: ['text', 'html'],
-      exclude: ['**/*styles', '**/*.config.*', '**/*api', '**/*router', '**/types.**'],
+      exclude: [
+        ...configDefaults.exclude,
+        '**/*styles',
+        '**/*.config.*',
+        '**/*api',
+        '**/*router',
+        '**/types.**',
+      ],
     },
   },
   resolve: {
