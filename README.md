@@ -1,14 +1,11 @@
-![reactjs-vite-tailwindcss-boilerplate](https://user-images.githubusercontent.com/16243531/217138979-b854309c-4742-4275-a705-f9fec5158217.jpg)
-
-# React Tailwindcss Boilerplate build with Vite
-
-This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
+# Playwright example
 
 ## What is inside?
 
-This project uses many tools like:
+Simple frontend project setup with playwright to e2e tests
 
 - [Vite](https://vitejs.dev)
+- [Playwright](https://playwright.dev/)
 - [ReactJS](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [Vitest](https://vitest.dev)
@@ -17,20 +14,12 @@ This project uses many tools like:
 - [Eslint](https://eslint.org)
 - [Prettier](https://prettier.io)
 
-## Getting Started
+## Run Project
 
-### Install
-
-Create the project.
+Git clone project and access the root directory.
 
 ```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
-
-Access the project directory.
-
-```bash
-cd my-app
+cd playwright-example
 ```
 
 Install dependencies.
@@ -73,6 +62,12 @@ View and interact with your tests via UI.
 
 ```bash
 pnpm run test:ui
+```
+
+Test coverage
+
+```bash
+pnpm run test:coverage
 ```
 
 ## License
